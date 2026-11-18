@@ -1,0 +1,9 @@
+# AegisX — core requirements (isolated virtual environment on Kali Linux)
+PySide6>=6.6.0
+pyqtgraph>=0.13.7
+requests>=2.31.0
+
+# --- Optional enhancements (auto-detected if installed; core app works without them)
+# keyring>=24.0.0        # system-grade API key storage
+# geoip2>=4.8.0          # local GeoLite2-City.mmdb lookups
+# dnspython>=2.4.0       # extended DNS record intelligence (MX/NS/TXT)
