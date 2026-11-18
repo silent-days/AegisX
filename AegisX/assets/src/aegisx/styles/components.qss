@@ -1,0 +1,83 @@
+/* ============================================================
+   AegisX — components.qss  (named components / object styles)
+   ============================================================ */
+
+/* ---------------------------------------------------------------- cards -- */
+#Card {
+    background: @surface;
+    border: 1px solid @border;
+    border-radius: @radius_card;
+}
+#CardFlat { background: @surface; border: 0; border-radius: @radius_card; }
+#CardInteractive {
+    background: @surface; border: 1px solid @border; border-radius: @radius_card;
+}
+#CardInteractive:hover { border-color: @primary_light; background: #FFFBFB; }
+#InsetPanel { background: @surface_alt; border: 1px solid @divider; border-radius: 12px; }
+
+/* --------------------------------------------------------------- text -- */
+#H1 { font-size: 21px; font-weight: 750; color: @text; }
+#H2 { font-size: 16px; font-weight: 700; color: @text; }
+#H3 { font-size: 13.5px; font-weight: 650; color: @text; }
+#Subtitle { font-size: 12.5px; color: @text_secondary; }
+#Muted { font-size: 11.5px; color: @text_muted; }
+#Overline { font-size: 10.5px; font-weight: 750; letter-spacing: 1.4px; color: @text_muted; }
+#Mono { font-family: @mono_family; }
+#BigNumber { font-size: 26px; font-weight: 800; color: @text; }
+#BrandTitle { font-size: 19px; font-weight: 800; color: @text; letter-spacing: 0.5px; }
+#BrandSub { font-size: 8.5px; font-weight: 700; letter-spacing: 1.8px; color: @text_muted; }
+
+/* -------------------------------------------------------------- badges -- */
+#Badge {
+    border-radius: 999px; padding: 3px 10px; font-size: 10.5px; font-weight: 700;
+}
+#BadgeCritical { background: @critical_soft; color: @critical; border: 1px solid #FCA5A5; }
+#BadgeHigh     { background: #FFEDD5; color: #C2410C; border: 1px solid #FDBA74; }
+#BadgeMedium   { background: @warning_soft; color: #B45309; border: 1px solid #FCD34D; }
+#BadgeLow      { background: @info_soft; color: #1D4ED8; border: 1px solid #93C5FD; }
+#BadgeInfo     { background: #F1F5F9; color: @text_secondary; border: 1px solid @border; }
+#BadgeSuccess  { background: @success_soft; color: #15803D; border: 1px solid #86EFAC; }
+#BadgeDemo     { background: @warning_soft; color: #B45309; border: 1px dashed #FCD34D; }
+#BadgePrimary  { background: @primary_soft; color: @primary_dark; border: 1px solid #FCA5A5; }
+
+/* ------------------------------------------------------------ sidebar -- */
+#SidebarNavButton {
+    background: transparent; border: 0; border-radius: 10px;
+    padding: 9px 12px; text-align: left; color: @text_secondary; font-size: 13px;
+}
+#SidebarNavButton:hover { background: @surface_alt; color: @text; }
+#SidebarNavButton:checked {
+    background: @hover; color: @primary_dark; font-weight: 650;
+}
+#SidebarGroup { font-size: 10px; font-weight: 750; letter-spacing: 1.6px; color: @text_muted; }
+
+/* ----------------------------------------------------------- titlebar -- */
+#TitleSearch {
+    background: @surface_alt; border: 1.5px solid @border; border-radius: 999px;
+    padding: 6px 14px 6px 34px;
+}
+#TitleSearch:focus { background: @surface; border-color: @primary_light; }
+#TitleButton {
+    background: transparent; border: 0; border-radius: 8px; padding: 0; margin: 0;
+}
+#TitleButton:hover { background: @surface_alt; }
+#WindowButton { background: transparent; border: 0; border-radius: 0; }
+#WindowButton:hover { background: @surface_alt; }
+#CloseButton:hover { background: @critical; }
+
+/* ----------------------------------------------------------- toasts -- */
+#Toast {
+    background: @surface; border: 1px solid @border; border-radius: 12px;
+}
+#ToastTitle { font-size: 12.5px; font-weight: 700; color: @text; }
+#ToastBody { font-size: 11.5px; color: @text_secondary; }
+
+/* ------------------------------------------------------------ tables -- */
+#DataTable { border: 1px solid @border; border-radius: 12px; background: @surface; }
+
+/* --------------------------------------------------------------- feed -- */
+#FeedItem { background: transparent; border: 0; }
+#FeedDot { border-radius: 5px; }
+
+/* -------------------------------------------------------------- lists -- */
+#ActivityList QLabel { padding: 1px 0; }
