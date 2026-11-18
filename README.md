@@ -1,6 +1,6 @@
  <div align="center">
 
-<img src="assets/icons/aegisx.png" width="150" alt="AegisX Logo">
+<img src="https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/icons/aegisx.png" width="150" alt="AegisX Logo">
 
 # AEGISX
 
@@ -15,7 +15,7 @@
 
 **Collect • Analyze • Correlate • Investigate • Protect**
 
-[Installation](#-installation) · [Features](#-key-features) · [Screenshots](#-screenshots) · [API Setup](#-api-configuration) · [Architecture](#-project-architecture)
+[Installation](#installation) · [Features](#key-features) · [Screenshots](#screenshots) · [API Setup](#api-configuration) · [Architecture](#project-architecture)
 
 **Developed by Silent Days**
 
@@ -53,42 +53,42 @@ Explore the AegisX desktop interface and its intelligence capabilities.
 
 | Dashboard | Global Threat Map |
 |:---:|:---:|
-| ![Dashboard](assets/screenshots/dashboard.png) | ![Global Threat Map](assets/screenshots/global_map.png) |
+| ![Dashboard](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/dashboard.png) | ![Global Threat Map](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/global_map.png) |
 | **Main Intelligence Dashboard** | **Global Threat Visualization** |
 
 ### Threat Investigation
 
 | IP Investigation | Domain Intelligence |
 |:---:|:---:|
-| ![IP Investigation](assets/screenshots/ip_investigation.png) | ![Domain Intelligence](assets/screenshots/domain_intelligence.png) |
+| ![IP Investigation](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/ip_investigation.png) | ![Domain Intelligence](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/domain_intelligence.png) |
 
 ### Intelligence & Analytics
 
 | Threat Analytics | Threat Correlation |
 |:---:|:---:|
-| ![Analytics](assets/screenshots/analytics.png) | ![Correlation](assets/screenshots/correlation.png) |
+| ![Analytics](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/analytics.png) | ![Correlation](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/correlation.png) |
 
 | Campaign Intelligence | Infrastructure Analysis |
 |:---:|:---:|
-| ![Campaigns](assets/screenshots/campaigns.png) | ![Infrastructure](assets/screenshots/infrastructure.png) |
+| ![Campaigns](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/campaigns.png) | ![Infrastructure](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/infrastructure.png) |
 
 ### Investigation & Reporting
 
 | Investigation Workspace | Professional Reports |
 |:---:|:---:|
-| ![Investigations](assets/screenshots/investigations.png) | ![Reports](assets/screenshots/reports.png) |
+| ![Investigations](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/investigations.png) | ![Reports](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/reports.png) |
 
 ### Threat Management
 
 | Threat Intelligence | Intelligence Sources |
 |:---:|:---:|
-| ![Threat Intelligence](assets/screenshots/threat_intelligence.png) | ![Sources](assets/screenshots/sources.png) |
+| ![Threat Intelligence](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/threat_intelligence.png) | ![Sources](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/sources.png) |
 
 ### Application
 
 | Settings | About AegisX |
 |:---:|:---:|
-| ![Settings](assets/screenshots/settings.png) | ![About](assets/screenshots/about.png) |
+| ![Settings](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/settings.png) | ![About](https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/screenshots/about.png) |
 
 ---
 
@@ -229,15 +229,10 @@ Explore the AegisX desktop interface and its intelligence capabilities.
 
 ```bash
 git clone https://github.com/silent-days/AegisX.git
+cd AegisX/AegisX/assets
 ```
 
-### 2. Navigate to the Project
-
-```bash
-cd AegisX
-```
-
-### 3. Install AegisX
+### 2. Install AegisX
 
 ```bash
 sudo bash install.sh
@@ -260,7 +255,7 @@ The installer automatically:
 
 **Note:** The installer is designed to be re-run safely for upgrades while preserving existing user data.
 
-### 4. Launch AegisX
+### 3. Launch AegisX
 
 ```bash
 aegisx
@@ -317,70 +312,56 @@ API credentials are stored using the system keyring when available, with an encr
 - [abuse.ch Authentication](https://auth.abuse.ch/)
 - [MaxMind GeoLite2](https://dev.maxmind.com/geoip/docs/databases/city-and-country)
 
-Detailed instructions: [API Setup Guide](docs/API_SETUP.md).
+Detailed instructions: [API Setup Guide](AegisX/assets/docs/API_SETUP.md).
 
 ---
 
 ## Project Architecture
 
-AegisX uses a modular architecture that separates the graphical interface, intelligence engine, providers, database, visualization, and security components.
-
 ```text
 AegisX/
-│
-├── install.sh
-├── uninstall.sh
-├── upgrade.sh
-├── run.sh
-├── entrypoint.py
-├── requirements.txt
-│
-├── src/
-│   └── aegisx/
-│       ├── main.py
-│       ├── application.py
-│       │
-│       ├── core/
-│       │   ├── intelligence_engine.py
-│       │   ├── correlation_engine.py
-│       │   ├── risk_engine.py
-│       │   ├── indicator_manager.py
-│       │   ├── mitre.py
-│       │   └── services.py
-│       │
-│       ├── providers/
-│       │   ├── abuseipdb.py
-│       │   ├── otx.py
-│       │   ├── virustotal.py
-│       │   ├── urlhaus.py
-│       │   ├── threatfox.py
-│       │   ├── community_dns.py
-│       │   ├── dns_over_https.py
-│       │   ├── opengeo.py
-│       │   └── geoip.py
-│       │
-│       ├── database/
-│       ├── ui/
-│       ├── visualization/
-│       ├── reports/
-│       ├── security/
-│       ├── workers/
-│       ├── utils/
-│       └── styles/
-│
-├── assets/
-│   ├── icons/
-│   ├── logos/
-│   └── screenshots/
-│
-├── docs/
-│   ├── API_SETUP.md
-│   ├── ARCHITECTURE.md
-│   ├── DEVELOPMENT.md
-│   ├── FEATURES.md
-│   └── INSTALLATION.md
-│
-└── tests/
+├── README.md
+├── LICENSE
+└── AegisX/
+    └── assets/
+        ├── install.sh
+        ├── uninstall.sh
+        ├── upgrade.sh
+        ├── run.sh
+        ├── entrypoint.py
+        ├── requirements.txt
+        ├── config.example.env
+        ├── src/
+        │   └── aegisx/
+        ├── icons/
+        │   ├── aegisx.png
+        │   ├── aegisx-64.png
+        │   └── aegisx-128.png
+        ├── logos/
+        │   └── aegisx-logo.png
+        ├── screenshots/
+        │   ├── dashboard.png
+        │   ├── global_map.png
+        │   ├── ip_investigation.png
+        │   ├── domain_intelligence.png
+        │   ├── analytics.png
+        │   ├── correlation.png
+        │   ├── campaigns.png
+        │   ├── infrastructure.png
+        │   ├── investigations.png
+        │   ├── threat_intelligence.png
+        │   ├── sources.png
+        │   ├── reports.png
+        │   ├── settings.png
+        │   └── about.png
+        ├── docs/
+        │   ├── API_SETUP.md
+        │   ├── ARCHITECTURE.md
+        │   ├── DEVELOPMENT.md
+        │   ├── FEATURES.md
+        │   └── INSTALLATION.md
+        ├── scripts/
+        └── tests/
 ```
 
 ---
@@ -404,14 +385,14 @@ AegisX is designed with security-conscious development practices.
 ### Run from Source
 
 ```bash
+cd AegisX/AegisX/assets
 bash run.sh
 ```
-
-The source launcher creates a virtual environment, installs the required dependencies, and launches the application.
 
 ### Run Tests
 
 ```bash
+cd AegisX/AegisX/assets
 python -m pytest tests/
 ```
 
@@ -425,12 +406,7 @@ aegisx --info
 ### Upgrade
 
 ```bash
-sudo bash upgrade.sh
-```
-
-Create a backup before upgrading:
-
-```bash
+cd AegisX/AegisX/assets
 sudo bash upgrade.sh --backup
 ```
 
@@ -439,12 +415,14 @@ sudo bash upgrade.sh --backup
 Remove the application while preserving user data:
 
 ```bash
+cd AegisX/AegisX/assets
 sudo bash uninstall.sh
 ```
 
 Remove application and user data:
 
 ```bash
+cd AegisX/AegisX/assets
 sudo bash uninstall.sh --purge-data
 ```
 
@@ -454,13 +432,11 @@ sudo bash uninstall.sh --purge-data
 
 ## Documentation
 
-Additional project documentation:
-
-- [Installation Guide](docs/INSTALLATION.md)
-- [API Setup Guide](docs/API_SETUP.md)
-- [Architecture Documentation](docs/ARCHITECTURE.md)
-- [Development Guide](docs/DEVELOPMENT.md)
-- [Features Documentation](docs/FEATURES.md)
+- [Installation Guide](AegisX/assets/docs/INSTALLATION.md)
+- [API Setup Guide](AegisX/assets/docs/API_SETUP.md)
+- [Architecture Documentation](AegisX/assets/docs/ARCHITECTURE.md)
+- [Development Guide](AegisX/assets/docs/DEVELOPMENT.md)
+- [Features Documentation](AegisX/assets/docs/FEATURES.md)
 
 ---
 
@@ -476,6 +452,8 @@ Additional project documentation:
 | GUI Framework | PySide6 |
 | Developer | Silent Days |
 | License | MIT |
+
+---
 
 ## Disclaimer
 
@@ -497,7 +475,7 @@ See the [LICENSE](LICENSE) file for details.
 
 <div align="center">
 
-<img src="assets/icons/aegisx.png" width="85" alt="AegisX">
+<img src="https://raw.githubusercontent.com/silent-days/AegisX/main/AegisX/assets/icons/aegisx.png" width="90" alt="AegisX Logo">
 
 ### AEGISX
 
